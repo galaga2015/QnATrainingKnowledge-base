@@ -36,8 +36,60 @@ pip install langchain tiktoken chromadb pypdf transformers InstructorEmbedding a
 
 ## Example Queries
 
-- "How do you createa census record?"
-- "What are the steps for calculating debt from census data?"
+# full example
+query = "what are the steps for calculating debt from cencus"
+llm_response = qa_chain(query)
+process_llm_response(llm_response)
+
+Response:
+To calculate debt from census data using CalARM, follow these steps:
+
+Step 1: Create a provider and facility record in CalARM. This will allow you to track the facility's
+information and history.
+
+Step 2: Enter the census data into CalARM. This should include the number of resident days for the month, as
+well as any other relevant information such as program type, case record type, and status.
+
+Step 3: Review the census data for accuracy and completeness. If there are any errors or omissions, you may
+need to resubmit the data or contact the facility to obtain missing information.
+
+Step 4: Once the census data has been reviewed and verified, CalARM will calculate the debt owed by the
+facility based on the resident days and other factors.
+
+Step 5: If there are errors or discrepancies in the census data, CalARM will flag the task and create a
+request for the facility to resubmit the data or provide additional information.
+
+Step 6: If the census data is accurate and complete, CalARM will notify the facility of the amount owed and
+any outstanding balances.
+
+Step 7: If the facility disputes the debt amount, they may choose to appeal the decision through the CalARM
+system.
+
+I hope this helps! Let me know if you have any further questions.
+
+
+Sources:
+training/Calculate Amount Due Based on Census Data for Calarm.txt
+training/Calculate Amount Due Based on Census Data for Calarm.txt
+training/Calculate Amount Due Based on Census Data for Calarm.txt
+
+query = "how do I enter in the bed days for a facility?"
+llm_response = qa_chain(query)
+process_llm_response(llm_response)
+
+Response:
+ To enter bed days for a facility in CalARM, you would need to create a new census case for the facility and
+input the necessary information such as the facility name, contact person, and start date of the census
+period. Once you have created the census case, you can input the total number of resident days for the
+facility during the census period. This can be done by either manually entering the data or importing it from
+another source. After the data has been entered, CalARM will calculate the amount due based on the
+reimbursement rate set by the state.
+
+
+Sources:
+training/Calculate Amount Due Based on Census Data for Calarm.txt
+training/Calculate Amount Due Based on Census Data for Calarm.txt
+training/Calculate Amount Due Based on Census Data for Calarm.txt
 
 ## Contributing
 
